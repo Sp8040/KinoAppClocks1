@@ -6,6 +6,8 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
 
 public interface ApiService {
 
@@ -17,4 +19,8 @@ public interface ApiService {
 
     @GET("movies?filter=new")
     Call<List<Movies>> getMovie();
+
+    @GET("movies/{movieId}")
+    Call<Movies> getMovieDate(@Path("movieId") int movieId);
+
 }
