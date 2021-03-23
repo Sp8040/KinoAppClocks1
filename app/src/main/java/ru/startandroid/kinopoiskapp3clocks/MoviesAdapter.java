@@ -37,14 +37,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         Movies movie = mMovies.get(position);
         Picasso.with(mContext)
                 .load(PHOTO_URL + movie.getPoster())
-                .resize(500,700)
+                .resize(150,210)
                 .into(holder.posterImageView);
 
         holder.posterImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MovieCard.class).putExtra("movieId", movie.getMovieId());
-                mContext.startActivity(intent);
+
             }
         });
     }

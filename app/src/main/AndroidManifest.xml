@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MovieCard"></activity>
         <activity android:name=".MoviesChat" />
         <activity android:name=".MoviesFavorite" />
         <activity android:name=".MoviesList" />
